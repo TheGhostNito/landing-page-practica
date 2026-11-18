@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8ee">
+  <meta name="description" content="Gomitas, chocolates y cajas de dulces para regalar o darte un gusto. Descubre el catálogo de Bocado, una dulcería ficticia de Santiago.">
+  <title>Bocado · Dulcería de barrio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b9243b'/%3E%3Cpath fill='%23fff8ee' d='M21 13h7v16c2-3 5-4 9-4 7 0 12 6 12 14s-5 14-12 14c-4 0-7-2-9-5v4h-7zm14 18c-4 0-7 3-7 8s3 8 7 8 7-3 7-8-3-8-7-8z'/%3E%3C/svg%3E">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-diagonal" viewBox="0 0 24 24"><path d="M6 18 18 6M8 6h10v10"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Zm4 2V6a3 3 0 0 1 6 0v4"/></symbol>
+    <symbol id="i-candy" viewBox="0 0 24 24"><path d="M8 9 3 6v6l5 2m8-4 5 2v6l-5-3"/><rect x="7" y="7" width="10" height="10" rx="4" transform="rotate(35 12 12)"/><path d="m12 8-2 8"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><path d="M4 11h16v10H4zm-1-4h18v4H3zm9 0v14m0-14H8.5A2.5 2.5 0 1 1 11 4.5L12 7Zm0 0h3.5A2.5 2.5 0 1 0 13 4.5L12 7Z"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h13v11H7m8-8h4l3 4v4h-2m-5 0h1M2 17h1m12-4h7"/><circle cx="5" cy="17" r="2"/><circle cx="18" cy="17" r="2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 4-7 11-7 11S5 14 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 1c0 8-3 11-11 11 8 0 11 3 11 11 0-8 3-11 11-11-8 0-11-3-11-11Z" fill="currentColor" stroke="none"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="announcement">
+    <a href="#promociones"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg> Caja para compartir por $9.990 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+  <header class="site-header" id="inicio">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#inicio" aria-label="Bocado, inicio">bocado<span>.</span></a>
+      <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#promociones">Promociones</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <button class="bag-button" type="button" aria-haspopup="dialog" aria-controls="bolsa" id="open-bag" hidden>
+          <svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg><span class="bag-label">Mi bolsa</span><span class="bag-count" aria-hidden="true">0</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú" hidden>
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow hero-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg> Dulcería de barrio</p>
+        <h1 id="hero-title">La vida es <em>más dulce.</em></h1>
+        <p class="hero-description">Gomitas, chocolates y antojos de todos los colores. Para regalar, compartir o comértelos de camino a casa.</p>
+        <a class="button button-primary" href="#catalogo">Explorar dulces <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="hero-media">
+        <img src="assets/caja-bocado.webp" alt="Caja roja de Bocado llena de gomitas de colores, aros azucarados y malvaviscos" width="1280" height="960" fetchpriority="high">
+        <a class="photo-link" href="#caja-para-compartir"><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg> Caja para compartir <svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></a>
+      </div>
+    </section>
+
+    <div class="wrap shop-details" aria-label="Servicios de la tienda">
+      <div><svg class="icon" aria-hidden="true"><use href="#i-candy"/></svg><span>Dulces por peso</span></div>
+      <div><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg><span>Cajas para regalar</span></div>
+      <div><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg><span>Envíos en Santiago</span></div>
+    </div>
+
+    <section class="catalog section-spacing wrap" id="catalogo" aria-labelledby="catalog-title" tabindex="-1">
+      <div class="catalog-heading">
+        <div>
+          <p class="eyebrow">El catálogo</p>
+          <h2 id="catalog-title">Tu próximo antojo<span class="accent">.</span></h2>
+        </div>
+        <div class="filters" aria-label="Filtrar dulces" hidden>
+          <button type="button" data-filter="all" aria-pressed="true">Todos</button>
+          <button type="button" data-filter="gomitas" aria-pressed="false">Gomitas</button>
+          <button type="button" data-filter="malvaviscos" aria-pressed="false">Malvaviscos</button>
+          <button type="button" data-filter="chocolate" aria-pressed="false">Chocolate</button>
+        </div>
+      </div>
+      <p class="visually-hidden" id="filter-results" role="status"></p>
+
+      <div class="products" id="productos">
+        <article class="product" data-item="ositos" data-category="gomitas" data-price="2490">
+          <img src="assets/ositos.webp" alt="Ositos de gomita de varios colores sobre un fondo rosa" width="619" height="619" loading="lazy">
+          <div class="product-info">
+            <h3 data-name>Ositos frutales</h3>
+            <p>Gomitas · 150 g</p>
+            <div class="product-buy"><strong>$2.490</strong><button type="button" class="icon-button add-button" data-add="ositos" aria-label="Añadir Ositos frutales a mi bolsa" hidden><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></div>
+          </div>
+        </article>
+        <article class="product" data-item="nubes" data-category="malvaviscos" data-price="2990">
+          <img src="assets/nubes.webp" alt="Malvaviscos trenzados en tonos pastel sobre un fondo amarillo" width="619" height="619" loading="lazy">
+          <div class="product-info">
+            <h3 data-name>Nubes de vainilla</h3>
+            <p>Malvaviscos · 120 g</p>
+            <div class="product-buy"><strong>$2.990</strong><button type="button" class="icon-button add-button" data-add="nubes" aria-label="Añadir Nubes de vainilla a mi bolsa" hidden><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></div>
+          </div>
+        </article>
+        <article class="product" data-item="chocolate" data-category="chocolate" data-price="3990">
+          <img src="assets/chocolate.webp" alt="Trozos de chocolate con leche sobre un fondo azul claro" width="619" height="619" loading="lazy">
+          <div class="product-info">
+            <h3 data-name>Chocolate con leche</h3>
+            <p>Chocolate · 100 g</p>
+            <div class="product-buy"><strong>$3.990</strong><button type="button" class="icon-button add-button" data-add="chocolate" aria-label="Añadir Chocolate con leche a mi bolsa" hidden><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></div>
+          </div>
+        </article>
+        <article class="product" data-item="aros" data-category="gomitas" data-price="2790">
+          <img src="assets/aros.webp" alt="Aros de durazno cubiertos de azúcar sobre un fondo coral" width="619" height="619" loading="lazy">
+          <div class="product-info">
+            <h3 data-name>Aros de durazno</h3>
+            <p>Gomitas ácidas · 150 g</p>
+            <div class="product-buy"><strong>$2.790</strong><button type="button" class="icon-button add-button" data-add="aros" aria-label="Añadir Aros de durazno a mi bolsa" hidden><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="promotions section-spacing wrap" id="promociones" aria-labelledby="promo-title" tabindex="-1">
+      <p class="eyebrow">Promociones</p>
+      <h2 id="promo-title">Más dulce en combo<span class="accent">.</span></h2>
+      <div class="offers">
+        <article class="offer offer-featured" id="caja-para-compartir" data-item="caja" data-price="9990">
+          <div class="offer-copy">
+            <p class="eyebrow">Ahorra $3.260</p>
+            <h3 data-name>Caja para compartir</h3>
+            <p>Tres porciones de gomitas surtidas, aros de durazno y malvaviscos en una caja lista para regalar.</p>
+            <div class="offer-price"><strong>$9.990</strong> <del aria-label="Antes $13.250">$13.250</del></div>
+            <button class="button button-light add-button" type="button" data-add="caja" aria-label="Añadir Caja para compartir a mi bolsa" hidden>Añadir a mi bolsa <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+          </div>
+          <img src="assets/caja-bocado.webp" alt="Caja de regalo Bocado con dulces surtidos" width="1280" height="960" loading="lazy">
+        </article>
+        <article class="offer offer-duo" data-item="duo" data-price="4490">
+          <p class="eyebrow">Ahorra $790</p>
+          <h3 data-name>Dúo de gomitas</h3>
+          <p>Una bolsa de ositos frutales y una de aros de durazno.</p>
+          <div class="offer-price"><strong>$4.490</strong> <del aria-label="Antes $5.280">$5.280</del></div>
+          <button class="button button-outline add-button" type="button" data-add="duo" aria-label="Añadir Dúo de gomitas a mi bolsa" hidden>Añadir a mi bolsa <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="story section-spacing wrap" id="nosotros" aria-labelledby="story-title" tabindex="-1">
+      <img src="assets/dulceria.webp" alt="Mostrador de una dulcería con frascos llenos de caramelos y gomitas" width="1040" height="780" loading="lazy">
+      <div class="story-copy">
+        <p class="eyebrow">Sobre Bocado</p>
+        <h2 id="story-title">Como la dulcería de la esquina<span class="accent">.</span></h2>
+        <p>Bocado nació de un recuerdo simple: elegir de a uno los dulces que iban a tu bolsita. Hoy juntamos esos clásicos con sabores nuevos, para que siempre encuentres algo que te dé curiosidad probar.</p>
+        <a class="text-link" href="#catalogo">Explorar dulces <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-spacing" id="contacto" aria-labelledby="contact-title" tabindex="-1">
+    <div class="wrap">
+      <div class="footer-content">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contact-title">Hablemos de dulces<span>.</span></h2>
+          <p>Para regalos, pedidos para eventos o preguntas sobre los dulces, escríbenos.</p>
+        </div>
+        <div class="contact-details">
+          <a href="mailto:hola@bocado.example"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> hola@bocado.example <svg class="icon contact-arrow" aria-hidden="true"><use href="#i-diagonal"/></svg></a>
+          <p><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Santiago, Chile</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a class="wordmark" href="#inicio" aria-label="Bocado, volver al inicio">bocado<span>.</span></a>
+        <p>Bocado es una tienda ficticia.</p>
+        <a class="footer-top" href="#inicio">Volver arriba <svg class="icon" aria-hidden="true"><use href="#i-diagonal"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="bag-dialog" id="bolsa" aria-labelledby="bag-title">
+    <div class="bag-panel">
+      <div class="bag-heading">
+        <h2 id="bag-title">Mi bolsa<span class="accent">.</span></h2>
+        <button type="button" class="icon-button" id="close-bag" aria-label="Cerrar mi bolsa" autofocus><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+      <p class="bag-empty">Tu bolsa está vacía. ¿Qué se te antoja?</p>
+      <ul class="bag-items" aria-label="Dulces en la bolsa"></ul>
+      <div class="bag-total" aria-live="polite" hidden><span>Total estimado</span><strong></strong></div>
+      <a class="button button-primary bag-return" href="#catalogo">Explorar dulces <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </dialog>
+
+  <template id="bag-item-template">
+    <li class="bag-item">
+      <div class="bag-item-info"><strong class="bag-item-name"></strong><span class="bag-item-price"></span></div>
+      <div class="bag-quantity">
+        <button type="button" class="icon-button" data-change="-1"><svg class="icon" aria-hidden="true"><use href="#i-minus"/></svg></button>
+        <span class="bag-item-quantity"></span>
+        <button type="button" class="icon-button" data-change="1"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+      </div>
+    </li>
+  </template>
+  <div class="notification" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
