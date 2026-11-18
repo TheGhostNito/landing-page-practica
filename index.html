@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ede4cf">
+  <meta name="description" content="Recreo, una dulcería ficticia con gomitas, chocolates, paletas y cajas para regalar.">
+  <title>Recreo — Dulcería</title>
+  <link rel="icon" href="images/recreo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-candy" viewBox="0 0 24 24">
+      <path d="M8 8 2 7l2 9 4-2m8-6 4-2 2 9-6-1"/>
+      <rect x="7" y="6.5" width="10" height="11" rx="4" transform="rotate(-25 12 12)"/>
+    </symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24">
+      <path d="M5 8h14l1.5 13h-17L5 8Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M6 18 18 6M7 6h11v11"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 40 40">
+      <path fill="currentColor" stroke="none" d="M20 0 23.9 13.2 36 4 27 16.1 40 20 27 23.9 36 36 23.9 27 20 40 16.1 27 4 36 13 23.9 0 20 13 16.1 4 4 16.1 13.2Z"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="announcement">
+    <a href="#promociones"><svg aria-hidden="true"><use href="#i-spark"/></svg> Mix Recreo de 300 g por $5.490 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+  <header class="site-header">
+    <div class="page-width header-inner">
+      <a class="wordmark" href="#" aria-label="Recreo, inicio">
+        <span class="brand-icon"><svg class="icon" aria-hidden="true"><use href="#i-candy"/></svg></span>
+        Recreo<span class="wordmark-dot">.</span>
+      </a>
+      <button class="icon-button menu-toggle" type="button" aria-controls="nav-principal" aria-expanded="false" aria-label="Abrir menú">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+      <nav id="nav-principal" class="primary-nav" aria-label="Navegación principal">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#promociones">Promociones</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="bag-button" type="button" aria-haspopup="dialog" aria-controls="bolsa" hidden>
+        <svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg>
+        <span class="bag-label">Mi bolsa</span><span class="bag-count" aria-label="0 productos">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="page-width hero-inner">
+        <div class="hero-copy">
+          <p class="category-label"><span></span> Dulcería</p>
+          <h1 id="hero-title">La vida pide<br><em>un recreo.</em></h1>
+          <p class="hero-description">Gomitas, chocolates y los clásicos del kiosco para hacer una pausa con algo rico.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#catalogo">Ver catálogo <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="text-link" href="#promociones">Ver ofertas <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="poster">
+            <img src="images/mix-recreo.webp" width="764" height="1024" alt="Gomitas de colores y una paleta en espiral sobre papel rosado" fetchpriority="high">
+            <div class="tape" aria-hidden="true"></div>
+          </div>
+          <svg class="poster-spark" aria-hidden="true"><use href="#i-spark"/></svg>
+          <a class="price-sticker" href="#mix-recreo">
+            <span>Mix Recreo</span>
+            <strong>$5.490</strong>
+            <small>300 g</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="category-band">
+      <div class="page-width category-band-inner">
+        <a href="#catalogo" data-jump-filter="gomitas">Gomitas</a>
+        <svg aria-hidden="true"><use href="#i-spark"/></svg>
+        <a href="#catalogo" data-jump-filter="chocolates">Chocolates</a>
+        <svg aria-hidden="true"><use href="#i-spark"/></svg>
+        <a href="#catalogo" data-jump-filter="paletas">Paletas</a>
+        <svg aria-hidden="true"><use href="#i-spark"/></svg>
+        <a href="#caja-recreo">Cajas para regalar</a>
+      </div>
+    </div>
+
+    <section class="catalog page-width" id="catalogo" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="catalog-title">Elige tu <em>antojo.</em></h2>
+          <p>De las gomitas ácidas al chocolate con avellanas.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filtrar el catálogo" hidden>
+          <button type="button" aria-pressed="true" data-filter="todos">Todos</button>
+          <button type="button" aria-pressed="false" data-filter="gomitas">Gomitas</button>
+          <button type="button" aria-pressed="false" data-filter="chocolates">Chocolates</button>
+          <button type="button" aria-pressed="false" data-filter="paletas">Paletas</button>
+        </div>
+      </div>
+      <div class="products">
+        <article class="product" data-category="gomitas" data-item="ositos" data-price="2490">
+          <img class="product-image" src="images/ositos.webp" width="720" height="477" loading="lazy" alt="Ositos de gomita rojos, amarillos, naranjos y verdes">
+          <div class="product-details">
+            <h3>Ositos frutales</h3>
+            <p>Gomitas surtidas · 120 g</p>
+            <strong class="price">$2.490</strong>
+          </div>
+          <button class="icon-button add-button" type="button" aria-label="Agregar Ositos frutales a mi bolsa" hidden><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+        </article>
+        <article class="product" data-category="gomitas" data-item="cintas" data-price="2990">
+          <img class="product-image" src="images/cintas-acidas.webp" width="720" height="477" loading="lazy" alt="Cintas arcoíris cubiertas de azúcar">
+          <div class="product-details">
+            <h3>Cintas ácidas</h3>
+            <p>Gomitas arcoíris · 120 g</p>
+            <strong class="price">$2.990</strong>
+          </div>
+          <button class="icon-button add-button" type="button" aria-label="Agregar Cintas ácidas a mi bolsa" hidden><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+        </article>
+        <article class="product" data-category="chocolates" data-item="chocolate" data-price="3490">
+          <img class="product-image" src="images/chocolate.webp" width="720" height="477" loading="lazy" alt="Trozos de chocolate de leche con avellanas enteras">
+          <div class="product-details">
+            <h3>Chocolate avellana</h3>
+            <p>Chocolate de leche · 80 g</p>
+            <strong class="price">$3.490</strong>
+          </div>
+          <button class="icon-button add-button" type="button" aria-label="Agregar Chocolate avellana a mi bolsa" hidden><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+        </article>
+        <article class="product" data-category="paletas" data-item="paletas" data-price="1990">
+          <img class="product-image" src="images/paletas.webp" width="720" height="477" loading="lazy" alt="Paletas en espiral rosada, naranja y verde">
+          <div class="product-details">
+            <h3>Paleta remolino</h3>
+            <p>Caramelo frutal · 1 unidad</p>
+            <strong class="price">$1.990</strong>
+          </div>
+          <button class="icon-button add-button" type="button" aria-label="Agregar Paleta remolino a mi bolsa" hidden><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="promotions" id="promociones" aria-labelledby="promo-title">
+      <div class="page-width">
+        <div class="section-heading">
+          <div>
+            <h2 id="promo-title">Las <em>promos.</em></h2>
+            <p>Dos formas de compartir tus dulces favoritos.</p>
+          </div>
+        </div>
+        <div class="promo-grid">
+          <article id="mix-recreo" class="promo-card promo-mix" data-item="mix" data-price="5490">
+            <div class="promo-copy">
+              <span class="offer-label">Ahorras $1.000</span>
+              <h3>Mix Recreo</h3>
+              <p>300 g de ositos, aros de durazno y cintas ácidas.</p>
+              <p class="promo-prices"><del>$6.490</del> <strong>$5.490</strong></p>
+              <button class="button button-dark add-button" type="button" aria-label="Agregar a mi bolsa: Mix Recreo" hidden>Agregar a mi bolsa <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+            </div>
+            <svg class="promo-spark" aria-hidden="true"><use href="#i-spark"/></svg>
+          </article>
+          <article id="caja-recreo" class="promo-card promo-gift" data-item="caja" data-price="9990">
+            <div class="promo-copy">
+              <span class="offer-label">Ahorras $2.000</span>
+              <h3>Caja Recreo</h3>
+              <p>Una caja para regalar con gomitas, chocolates y paletas.</p>
+              <p class="promo-prices"><del>$11.990</del> <strong>$9.990</strong></p>
+              <button class="button button-dark add-button" type="button" aria-label="Agregar a mi bolsa: Caja Recreo" hidden>Agregar a mi bolsa <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+            </div>
+            <div class="gift-photo">
+              <img src="images/caja-recreo.webp" width="664" height="890" loading="lazy" alt="Caja rosada con gomitas, chocolates envueltos y paletas">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about page-width" id="nosotros" aria-labelledby="about-title">
+      <div class="about-mark" aria-hidden="true">
+        <svg class="icon"><use href="#i-candy"/></svg>
+        <svg class="about-spark"><use href="#i-spark"/></svg>
+      </div>
+      <div>
+        <h2 id="about-title">El kiosco del <em>recreo.</em></h2>
+        <p>Recreo se inspira en el kiosco del colegio y en la emoción de elegir qué meter en la bolsita. Reunimos gomitas, chocolates y paletas para volver a ese momento, compartir algo rico o armar un regalo.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
+      <div class="page-width contact-inner">
+        <div>
+          <h2 id="contact-title">Hablemos de <em>dulces.</em></h2>
+          <p>Si estás pensando en una caja para regalar, cuéntanos qué dulces te gustaría incluir y para cuántas personas.</p>
+        </div>
+        <div class="contact-address">
+          <span>Correo de demostración</span>
+          <a href="mailto:hola@dulceria-recreo.example"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> hola@dulceria-recreo.example</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-inner">
+      <a class="wordmark" href="#" aria-label="Recreo, volver al inicio">Recreo<span class="wordmark-dot">.</span></a>
+      <p>Dulcería ficticia · Precios en pesos chilenos</p>
+      <a href="#" class="text-link">Volver arriba <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
+    </div>
+  </footer>
+
+  <dialog id="bolsa" class="bag-dialog" aria-labelledby="bag-title">
+    <div class="bag-heading">
+      <h2 id="bag-title">Mi bolsa</h2>
+      <form method="dialog">
+        <button type="submit" class="icon-button close-bag" aria-label="Cerrar bolsa" autofocus><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </form>
+    </div>
+    <p class="bag-empty">Tu bolsa está vacía.</p>
+    <ul class="bag-items" aria-label="Productos en la bolsa"></ul>
+    <div class="bag-total"><span>Total</span><strong>$0</strong></div>
+    <p class="bag-note">Bolsa de demostración.</p>
+  </dialog>
+  <div class="toast" role="status" aria-atomic="true"></div>
+</body>
+</html>
